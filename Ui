@@ -1,10 +1,12 @@
---[[ Before you use this on ur skidded script add this
-local MainColor = Color3.fromRGB(0,0,0)]]
 -- Stops ur script if ur an ed
 if _G.Skidd then
     return
 end
 _G.Skidd = true
+
+local Shh = {
+    MainColor = Color3.fromRGB(0, 85, 255),
+}
 
 local gui = Instance.new("ScreenGui")
 gui.Parent = game.CoreGui
@@ -59,14 +61,14 @@ end
 
 -- So
 
-AddLine({70, 1, 0, 0, Color = MainColor, Parent = so}) -- Top
-AddLine({70, 1, 0, 30, Color = MainColor, Parent = so}) -- Bottom
-AddLine({1, 30, 0, 0, Color = MainColor, Parent = so}) -- Left
-AddLine({1, 30, 70, 0, Color = MainColor, Parent = so}) -- Left
+AddLine({70, 1, 0, 0, Color = Shh.MainColor, Parent = so}) -- Top
+AddLine({70, 1, 0, 30, Color = Shh.MainColor, Parent = so}) -- Bottom
+AddLine({1, 30, 0, 0, Color = Shh.MainColor, Parent = so}) -- Left
+AddLine({1, 30, 70, 0, Color = Shh.MainColor, Parent = so}) -- Left
 
 -- Ro
 
-AddLine({70, 1, 0, 0, Color = MainColor, Parent = ro}) -- Top
-AddLine({70, 1, 0, 30, Color = MainColor, Parent = ro}) -- Bottom
-AddLine({1, 30, 0, 0, Color = MainColor, Parent = ro}) -- Left
-AddLine({1, 30, 70, 0, Color = MainColor, Parent = ro}) -- Right
+AddLine({70, 1, 0, 0, Color = Shh.MainColor, Parent = ro}) -- Top
+AddLine({70, 1, 0, 30, Color = Shh.MainColor, Parent = ro}) -- Bottom
+AddLine({1, 30, 0, 0, Color = Shh.MainColor, Parent = ro}) -- Left
+AddLine({1, 30, 70, 0, Color = Shh.MainColor, Parent = ro}) -- Right
