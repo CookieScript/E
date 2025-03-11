@@ -34,7 +34,7 @@ ro.Position = UDim2.new(0, 5, 0, 35)
 ro.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 ro.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ro.BorderSizePixel = 0
-ro.Text = "Lock ui"
+ro.Text = "Lock UI"
 ro.Draggable = true
 ro.TextSize = 13
 ro.BackgroundTransparency = 0 
@@ -42,9 +42,12 @@ ro.TextColor3 = Color3.new(255, 255, 255)
 ro.Font = Enum.Font.Code
 ro.Parent = gui
 
+local drakable = false
+
 ro.MouseButton1Click:Connect(function()
-    Library:MakeDraggable() = not Library:MakeDraggable();
-    ro.Text = Library:MakeDraggable() and "Unlock UI" or "Lock UI";
+    drakable = not drakable
+    Library:MakeDraggable(drakable)
+    ro.Text = drakable and "Unlock UI" or "Lock UI"
 end)
 
 function AddLine(Shh)
