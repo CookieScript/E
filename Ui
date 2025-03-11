@@ -1,0 +1,58 @@
+-- open ui, drag
+local gui = Instance.new("ScreenGui")
+gui.Parent = game.CoreGui
+
+
+local so = Instance.new("TextButton")
+so.Size = UDim2.new(0, 90, 0, 30)
+so.Position = UDim2.new(0, 10, 0, 10)
+so.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+so.BorderColor3 = Color3.fromRGB(0, 0, 0)
+so.BorderSizePixel = 0
+so.Text = "open ui"
+so.Draggable = true
+so.TextSize = 20
+so.BackgroundTransparency = 0 
+so.TextColor3 = Color3.new(255, 255, 255)
+so.Font = Enum.Font.Code
+so.Parent = gui
+
+local ro = Instance.new("TextButton")
+ro.Size = UDim2.new(0, 90, 0, 30)
+ro.Position = UDim2.new(0, 10, 0, 35)
+ro.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ro.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ro.BorderSizePixel = 0
+ro.Text = "draggable"
+ro.Draggable = true
+ro.TextSize = 20
+ro.BackgroundTransparency = 0 
+ro.TextColor3 = Color3.new(255, 255, 255)
+ro.Font = Enum.Font.Code
+ro.Parent = gui
+
+function AddLine(Shh)
+    local Line = Instance.new("Frame")
+    Line.Size = UDim2.new(0, Shh[1], 0, Shh[2])
+    Line.Position = UDim2.new(0, Shh[3], 0, Shh[4])
+    Line.BackgroundColor3 = Shh.Color
+    Line.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    Line.BorderSizePixel = 1
+    Line.Active = true
+    Line.BackgroundTransparency = 0
+    Line.Parent = Shh.Parent
+end
+
+-- So
+
+AddLine({90, 1, 0, 0, Color = Color3.fromRGB(255, 255, 255), Parent = so}) -- Top
+AddLine({90, 1, 0, 30, Color = Color3.fromRGB(255, 255, 255), Parent = so}) -- Bottom
+AddLine({1, 30, 0, 0, Color = Color3.fromRGB(255, 255, 255), Parent = so}) -- Left
+AddLine({1, 30, 90, 0, Color = Color3.fromRGB(255, 255, 255), Parent = so}) -- Left
+
+-- Ro
+
+AddLine({90, 1, 0, 0, Color = Color3.fromRGB(255, 255, 255), Parent = ro}) -- Top
+AddLine({90, 1, 0, 30, Color = Color3.fromRGB(255, 255, 255), Parent = ro}) -- Bottom
+AddLine({1, 30, 0, 0, Color = Color3.fromRGB(255, 255, 255), Parent = ro}) -- Left
+AddLine({1, 30, 90, 0, Color = Color3.fromRGB(255, 255, 255), Parent = ro}) -- Left
