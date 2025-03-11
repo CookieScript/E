@@ -3,7 +3,7 @@ if _G.Skidd then
     return
 end
 _G.Skidd = true
-
+-- Dont change anything js Change the MainColor
 local Shh = {
     MainColor = Color3.fromRGB(0, 85, 255),
 }
