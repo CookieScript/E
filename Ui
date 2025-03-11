@@ -12,7 +12,7 @@ local gui = Instance.new("ScreenGui")
 gui.Parent = game.CoreGui
 
 local so = Instance.new("TextButton")
-so.Size = UDim2.new(0, 70, 0, 30)
+so.Size = UDim2.new(0, 70, 0, 28)
 so.Position = UDim2.new(0, 5, 0, 10)
 so.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 so.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -28,8 +28,9 @@ so.Parent = gui
 so.MouseButton1Click:Connect(function()
     Library:Toggle()
 end)
+--[[ not done yet Skidder
 local ro = Instance.new("TextButton")
-ro.Size = UDim2.new(0, 70, 0, 30)
+ro.Size = UDim2.new(0, 70, 0, 28)
 ro.Position = UDim2.new(0, 5, 0, 35)
 ro.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 ro.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -49,6 +50,7 @@ ro.MouseButton1Click:Connect(function()
     Library:MakeDraggable(drakable)
     ro.Text = drakable and "Unlock UI" or "Lock UI"
 end)
+]]
 
 function AddLine(Shh)
     local Line = Instance.new("Frame")
@@ -65,13 +67,14 @@ end
 -- So
 
 AddLine({70, 1, 0, 0, Color = Shh.MainColor, Parent = so}) -- Top
-AddLine({70, 1, 0, 30, Color = Shh.MainColor, Parent = so}) -- Bottom
-AddLine({1, 30, 0, 0, Color = Shh.MainColor, Parent = so}) -- Left
-AddLine({1, 30, 70, 0, Color = Shh.MainColor, Parent = so}) -- Left
+AddLine({70, 1, 0, 28, Color = Shh.MainColor, Parent = so}) -- Bottom
+AddLine({1, 28, 0, 0, Color = Shh.MainColor, Parent = so}) -- Left
+AddLine({1, 28, 70, 0, Color = Shh.MainColor, Parent = so}) -- Left
 
--- Ro
+--[[ Ro not done yet Skidder
 
 AddLine({70, 1, 0, 0, Color = Shh.MainColor, Parent = ro}) -- Top
-AddLine({70, 1, 0, 30, Color = Shh.MainColor, Parent = ro}) -- Bottom
-AddLine({1, 30, 0, 0, Color = Shh.MainColor, Parent = ro}) -- Left
-AddLine({1, 30, 70, 0, Color = Shh.MainColor, Parent = ro}) -- Right
+AddLine({70, 1, 0, 28, Color = Shh.MainColor, Parent = ro}) -- Bottom
+AddLine({1, 28, 0, 0, Color = Shh.MainColor, Parent = ro}) -- Left
+AddLine({1, 28, 70, 0, Color = Shh.MainColor, Parent = ro}) -- Right
+]]
